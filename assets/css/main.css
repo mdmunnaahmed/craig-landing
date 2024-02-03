@@ -79,6 +79,15 @@ ul {
   z-index: 1;
 }
 
+.middle-content {
+  padding-inline: 60px;
+  margin-bottom: 35px;
+  max-width: 700px;
+}
+.middle-content p {
+  line-height: 1.4;
+}
+
 .all-content-section {
   padding-bottom: 50px;
 }
@@ -206,16 +215,29 @@ ul {
   font-size: 24px;
   color: #fff;
   text-decoration: none;
-  background: #1c76d4;
-  border: 2px solid #000000;
+  background-color: #007bff;
+  border: 2px solid #007bff;
   transition: all ease 0.3s;
-  box-shadow: 6px 7px 0px #000000;
+  border-radius: 15px;
+  font-weight: 600;
+  cursor: pointer;
 }
-.car-overall .content-inner-wrapper .simple-content .price-btn.style-two {
+.car-overall .content-inner-wrapper .simple-content .price-btn.btn-color-two {
   background-color: #dc3545;
+  border-color: #dc3545;
+}
+.car-overall .content-inner-wrapper .simple-content .price-btn.btn-color-two:hover {
+  background-color: #be1b2b;
+  border-color: #be1b2b;
+  box-shadow: 0px 5px 15px rgba(190, 27, 43, 0.368627451);
+  transform: translateY(-4px);
 }
 .car-overall .content-inner-wrapper .simple-content .price-btn:hover {
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.9803921569);
+  color: #fff;
+  background-color: #0363ca;
+  border-color: #0363ca;
+  box-shadow: 0px 5px 15px rgba(3, 99, 202, 0.368627451);
+  transform: translateY(-4px);
 }
 .car-overall .content-inner-wrapper .thumb-wrapper {
   margin-top: 24px;
@@ -233,9 +255,201 @@ ul {
 }
 .car-overall .content-inner-wrapper .thumb-wrapper img {
   width: 100%;
-  height: 200px;
+  height: 180px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.order-complete-modal .modal-top-content {
+  border-bottom: 1.5px solid #999;
+  padding-bottom: 20px;
+}
+.order-complete-modal .modal-top-content h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.order-complete-modal .modal-top-content .pakage-name {
+  font-weight: 500;
+  font-size: 15px;
+}
+.order-complete-modal .modal-body-content {
+  padding-top: 30px;
+}
+.order-complete-modal .modal-body-content ul {
+  max-width: 500px;
+}
+.order-complete-modal .modal-body-content ul li {
+  display: flex;
+  line-height: 1;
+  align-items: center;
+  gap: 15px;
+  font-size: 15px;
+}
+.order-complete-modal .modal-body-content ul li p {
+  margin-bottom: 0;
+  line-height: 1;
+}
+.order-complete-modal .modal-body-content ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.order-complete-modal .modal-body-content ul li img {
+  height: 25px;
+}
+.order-complete-modal .modal-body-content .checkbox-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  line-height: 1;
+  gap: 10px;
+}
+.order-complete-modal .modal-body-content .checkbox-wrapper label {
+  font-size: 15px;
+  transform: translateY(2px);
+}
+.order-complete-modal .trigger {
+  text-align: center;
+  padding: 7px 13px;
+  background: #3e3e3e;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-family: cursive;
+}
+.order-complete-modal .modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  z-index: 999;
+}
+.order-complete-modal .modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding-top: 40px;
+  padding-inline: 50px;
+  padding-bottom: 20px;
+  width: 36rem;
+  border-radius: 0.5rem;
+}
+.order-complete-modal form {
+  padding-block: 25px;
+}
+.order-complete-modal form .form-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 500px;
+}
+.order-complete-modal form .form-group label {
+  min-width: 100px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.order-complete-modal form .form-group input[type=text] {
+  display: block;
+  width: 100%;
+  height: 42px;
+  padding: 0.375rem 0.75rem;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.order-complete-modal form .form-group input[type=text]:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+.order-complete-modal form .form-group:not(:last-child) {
+  margin-bottom: 20px;
+}
+.order-complete-modal form .form-group .content {
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 530px;
+}
+.order-complete-modal form input#check-agree {
+  width: 16px;
+  height: 16px;
+}
+.order-complete-modal form .complete-payment-btn-wrapper {
+  text-align: center;
+  margin-top: 45px;
+  width: 100%;
+}
+.order-complete-modal form button {
+  background-color: #007bff;
+  border-color: #007bff;
+  border-radius: 10px;
+  line-height: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding-inline: 20px;
+  gap: 10px;
+  outline: none;
+  cursor: pointer;
+  padding-block: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  transition: all ease 0.3s;
+  box-shadow: none;
+  outline: none;
+}
+.order-complete-modal form button:hover {
+  color: #fff;
+  background-color: #0363ca;
+  border-color: #0363ca;
+}
+.order-complete-modal form button svg {
+  height: 35px;
+  width: 35px;
+}
+.order-complete-modal .close-button {
+  float: right;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.order-complete-modal .close-button img {
+  width: 28px;
+}
+.order-complete-modal .close-button:hover {
+  background-color: darkgray;
+}
+.order-complete-modal .show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 
 @media (max-width: 992px) {
@@ -345,5 +559,38 @@ ul {
   }
   .car-overall .content-inner-wrapper .simple-content {
     padding-inline: 20px;
+  }
+  .order-complete-modal .modal-content {
+    padding-inline: 30px;
+    max-width: 380px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+  }
+  .order-complete-modal .modal-top-content h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+  .order-complete-modal form .form-group {
+    gap: 5px;
+  }
+  .order-complete-modal .modal-body-content ul li {
+    font-size: 14px;
+  }
+  .order-complete-modal form .form-group input[type=text] {
+    font-size: 14px;
+    height: 40px;
+  }
+  .middle-content {
+    margin-bottom: 0;
+    margin-top: 30px;
+    padding-inline: 30px;
+  }
+  .middle-content p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 375px) {
+  .order-complete-modal .modal-content {
+    max-width: 350px;
   }
 }/*# sourceMappingURL=main.css.map */
